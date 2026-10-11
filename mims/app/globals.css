@@ -21,9 +21,18 @@ button { cursor: pointer; }
 .nav { background: var(--primary); color: white; min-height: 64px; display:flex; align-items:center; }
 .nav-inner { max-width:1200px; width:100%; margin:auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
 .brand { font-weight:800; letter-spacing:.3px; }
-.nav-links { display:flex; gap:16px; flex-wrap:wrap; }
+.nav-links { display:flex; gap:16px; align-items:center; }
 .nav-links a { opacity:.9; font-size:14px; }
 .nav-links a:hover { opacity:1; }
+.nav-dropdown { position: relative; display: inline-block; }
+.nav-dropdown-btn { background: transparent; border: none; color: white; opacity: .9; font-size: 14px; padding: 6px 0; display: inline-flex; align-items: center; gap: 4px; }
+.nav-dropdown-btn:hover { opacity: 1; }
+.nav-dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 10px 25px rgba(20, 35, 55, 0.15); min-width: 170px; display: flex; flex-direction: column; padding: 6px 0; z-index: 100; }
+.nav-dropdown-menu a { color: var(--text) !important; padding: 8px 16px; font-size: 14px; opacity: 1 !important; display: block; }
+.nav-dropdown-menu a:hover { background: #f5f7fb; color: var(--primary) !important; }
+.nav-profile { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.nav-role-badge { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; background: rgba(255, 255, 255, 0.16); padding: 4px 8px; border-radius: 6px; }
+
 .hero { background: linear-gradient(135deg, #173f5f, #20639b); color:white; border-radius:18px; padding:34px; margin-bottom:24px; }
 .hero h1 { margin:0 0 8px; font-size:32px; }
 .hero p { margin:0; opacity:.9; max-width:720px; }
