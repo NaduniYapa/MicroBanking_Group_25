@@ -1,4 +1,5 @@
 import { PageHeader } from "@/components/PageHeader";
+import { ProcessInterestButton } from "@/components/ProcessInterestButton";
 import { getDbPool } from "@/lib/db/mysql";
 import { RowDataPacket } from "mysql2";
 
@@ -28,7 +29,16 @@ export default async function AdminPage() {
     <div className="grid grid-3">
       {stats.map(s=><div className="card" key={s.label}><div className="muted small">{s.label}</div><div className="stat">{s.value}</div></div>)}
     </div>
-    <div className="card" style={{marginTop:16}}>
+
+    <div className="card" style={{ marginTop: 24 }}>
+      <h2>Global Operations</h2>
+      <p className="muted" style={{ marginBottom: 20 }}>
+        Central administrative actions and batch routines.
+      </p>
+      <ProcessInterestButton />
+    </div>
+
+    <div className="card" style={{ marginTop: 24 }}>
       <h2>Recent transactions</h2>
       <p className="muted">Figures are calculated from the current database records.</p>
     </div>

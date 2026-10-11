@@ -30,11 +30,11 @@ INSERT INTO branch (branch_id, bank_id, branch_code, branch_name, location, addr
 (2, 1, 'BR002', 'Kandy Branch', 'Kandy', '2 Kandy Rd', '0812222222', 'kandy@btrust.lk'),
 (3, 1, 'BR003', 'Galle Branch', 'Galle', '3 Galle Rd', '0913333333', 'galle@btrust.lk');
 
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (1, 2, 'agent1', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (2, 2, 'agent2', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (3, 2, 'agent3', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (4, 2, 'agent4', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (5, 2, 'agent5', 'hash_pwd');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (1, 2, 'agent1', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (2, 2, 'agent2', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (3, 2, 'agent3', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (4, 2, 'agent4', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (5, 2, 'agent5', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
 
 INSERT INTO agent (agent_id, user_id, branch_id, agent_code, first_name, last_name, nic, phone, email, joined_date) VALUES
 (1, 1, 1, 'AGT001', 'Kamal', 'Perera', '801234567V', '0711111111', 'kamal@btrust.lk', '2020-01-15'),
@@ -44,21 +44,21 @@ INSERT INTO agent (agent_id, user_id, branch_id, agent_code, first_name, last_na
 (5, 5, 3, 'AGT005', 'Ruwan', 'Rajapaksha', '841234567V', '0715555555', 'ruwan@btrust.lk', '2020-05-15');
 
 
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (6, 3, 'cust1', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (7, 3, 'cust2', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (8, 3, 'cust3', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (9, 3, 'cust4', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (10, 3, 'cust5', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (11, 3, 'cust6', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (12, 3, 'cust7', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (13, 3, 'cust8', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (14, 3, 'cust9', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (15, 3, 'cust10', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (16, 3, 'cust11', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (17, 3, 'cust12', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (18, 3, 'cust13', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (19, 3, 'cust14', 'hash_pwd');
-INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (20, 3, 'cust15', 'hash_pwd');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (6, 3, 'cust1', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (7, 3, 'cust2', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (8, 3, 'cust3', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (9, 3, 'cust4', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (10, 3, 'cust5', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (11, 3, 'cust6', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (12, 3, 'cust7', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (13, 3, 'cust8', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (14, 3, 'cust9', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (15, 3, 'cust10', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (16, 3, 'cust11', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (17, 3, 'cust12', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (18, 3, 'cust13', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (19, 3, 'cust14', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+INSERT INTO user_account (user_id, role_id, username, password_hash) VALUES (20, 3, 'cust15', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
 
 INSERT INTO customer (customer_id, user_id, branch_id, agent_id, nic, first_name, last_name, date_of_birth, gender, phone, address) VALUES
 (1, 6, 3, 5, '19711234567V', 'CustFirst1', 'CustLast1', '1971-01-01', 'FEMALE', '0770000001', 'Address 1'),
@@ -239,3 +239,9 @@ UPDATE savings_account SET current_balance = 44000.00 WHERE account_id = 12;
 UPDATE savings_account SET current_balance = 54000.00 WHERE account_id = 13;
 UPDATE savings_account SET current_balance = 58000.00 WHERE account_id = 14;
 UPDATE savings_account SET current_balance = 28000.00 WHERE account_id = 15;
+
+INSERT INTO user_account (user_id, role_id, username, password_hash) 
+VALUES (21, 2, 'my_custom_agent', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
+
+INSERT INTO user_account (user_id, role_id, username, password_hash) 
+VALUES (22, 1, 'admin', '$2b$12$942JEBkBrUdENdNURjBXX.PxWIzPsNw67ml9P4Zq8xHkeuvhpS9I2');
