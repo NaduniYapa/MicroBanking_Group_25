@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 type Role = "ADMIN" | "AGENT" | "CUSTOMER";
 
 export function Nav() {
   const router = useRouter();
+  const pathname = usePathname();
   const [role, setRole] = useState<Role | null>(null);
   const [checked, setChecked] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -23,7 +24,7 @@ export function Nav() {
       .then(value => setRole(value ?? null))
       .catch(() => setRole(null))
       .finally(() => setChecked(true));
-  }, []);
+  }, [pathname]);
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -48,7 +49,8 @@ export function Nav() {
     setOpenDropdown(prev => (prev === name ? null : name));
   }
 
-  const brandHref = role === "ADMIN" ? "/admin" : role === "AGENT" ? "/agent" : role === "CUSTOMER" ? "/customer" : "/";
+  const isPublicPage = pathname === "/" || pathname === "/login";
+  const brandHref = role === "ADMIN" ? "/admin" : role === "AGENT" ? "/agent" : role === "CUSTOMER" ? "/customer" : "/login";
 
   return (
     <header className="nav" ref={navRef}>
@@ -58,7 +60,7 @@ export function Nav() {
             B-Trust MIMS
           </Link>
 
-          {role && (
+          {role && !isPublicPage && (
             <nav className="nav-links">
 
               {/* Admin & Agent Grouped Menus */}
@@ -132,7 +134,11 @@ export function Nav() {
 
         {/* Right-Aligned Profile / Logout or Login */}
         <div className="nav-profile">
-          {checked && !role && <Link href="/login">Login</Link>}
+          {checked && !role && (
+            <Link href="/login" className="btn">
+              Login
+            </Link>
+          )}
           {role && (
             <>
               <span className="nav-role-badge">{role}</span>
