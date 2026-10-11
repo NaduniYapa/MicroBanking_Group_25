@@ -15,13 +15,9 @@ TRUNCATE TABLE branch;
 TRUNCATE TABLE bank;
 SET FOREIGN_KEY_CHECKS = 1;
 
-<<<<<<< HEAD
 --------------------------------------------------------------------------------
 -- Seed branches, agents, and test users (Roles, Bank, Branch, User Account, Agent)
 --------------------------------------------------------------------------------
-=======
-Seed branches, agents, and test users (Roles, Bank, Branch, User Account, Agent)
->>>>>>> origin/develop
 
 INSERT INTO role (role_id, role_name) VALUES
 (1, 'ADMIN'), (2, 'AGENT'), (3, 'CUSTOMER');
