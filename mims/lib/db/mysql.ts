@@ -11,7 +11,12 @@ export function getDbPool() {
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       waitForConnections: true,
-      connectionLimit: 10
+      connectionLimit: 10,
+      ssl: process.env.DB_SSL === "false"
+        ? undefined
+        : process.env.NODE_ENV === "production" || process.env.DB_SSL === "true"
+          ? { rejectUnauthorized: true }
+          : undefined
     });
   }
   return pool;
